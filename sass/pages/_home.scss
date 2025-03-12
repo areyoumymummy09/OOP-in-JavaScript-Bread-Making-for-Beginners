@@ -1,7 +1,38 @@
-.content {
-    display: none;
-  }
+@use "../abstracts/variables" as var; 
+body {
+  margin:0;
+  font-family: Roboto, sans-serif;
+}
 
- #web-dev{
-  display: block;
- } 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+
+nav {
+  background-color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
