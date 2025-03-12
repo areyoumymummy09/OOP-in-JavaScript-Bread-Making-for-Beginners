@@ -1,0 +1,17 @@
+@use "../abstracts" as a; 
+@use "../abstracts/variables" as var; 
+
+button {
+    padding: 10px 20px;
+    background-color: var.$accent-color;
+    color: var.$background-color;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: var.$accent-color;
+  }
+  

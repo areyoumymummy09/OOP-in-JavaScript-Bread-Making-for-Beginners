@@ -1,0 +1,111 @@
+@use "../abstracts/variables" as var; 
+
+.company-ad {
+    background-color: var.$background-color;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+
+    // Bread Details (Main Content)
+    .bread-details {
+        flex: 2;
+        font-size: 1rem;
+        line-height: 1.6;
+
+        h2, h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+            list-style: disc;
+            line-height: 1.6;
+        }
+    }
+
+    // Aside Tips Section
+    .bread-tips {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    // Tip Card Styling
+    .tip-card {
+        padding: 15px;
+        border-radius: 15px;
+        text-align: center;
+        color: #000;
+        background-color: #fff;
+
+        img {  
+            width: 400px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        // Pink Background for the First Card
+        &.pink {
+            background-color: var.$button-color;
+
+        }
+
+        // Yellow Background for the Second Card
+        &.yellow {
+            background-color: var.$box-color;
+
+            img {
+                width: 150px; // Specific size for pink card image
+                height: auto;
+            }
+        }
+
+        // Social Icons Styling
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+
+            a img {
+                width: 40px;
+                height: auto;
+            }
+        }
+    }
+
+    // Desktop Styles (768px and up)
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 40px;
+
+        .bread-details {
+            flex: 2;
+            padding-right: 20px;
+        }
+
+        .bread-tips {
+            flex: 1;
+        }
+
+        .tip-card {
+            padding: 20px;
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
