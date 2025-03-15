@@ -43,10 +43,24 @@
     background-position: center;
     background-repeat: no-repeat;
     padding: 10px;
+   
 
-    img {
+     img {
         width: 120px;
         height: auto;
+        margin: 0 auto;  
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    &.brioche:hover,
+    &.bagel:hover,
+    &.bolillo:hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+
+        }
     }
 
     @media (min-width: 768px) {

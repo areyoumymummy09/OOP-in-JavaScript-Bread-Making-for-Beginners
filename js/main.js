@@ -1,5 +1,8 @@
-import { BriocheCrown, Bagel, Bolillo } from "./bread.js";
-import { renderTutorialLink, renderTipCard } from "./ui.js";
+import { BriocheCrown, Bagel, Bolillo } from './bread.js';
+import { CapybaraSoundButton } from './sound.js';
+import { animate } from './animate.js';
+
+
 
 const brioche = new BriocheCrown(
     "Breakfast, dessert, snack and main course as a burger bun",
@@ -14,17 +17,22 @@ const bagel = new Bagel(
     "Warm Water, Yeast, Bread Flour, Brown Sugar, Salt",
     "Germany, Poland",
     "Medium",
-    "The Bagel is a traditional Jewish bread known for its dense, chewy texture and distinctive ring shape. Originating from Poland, it's typically boiled before baking, giving it a crisp exterior and soft interior. Bagels are often enjoyed with a variety of toppings, such as cream cheese, smoked salmon, or seeds.",
+    "The Bagel is a traditional Jewish bread known for its dense, chewy texture and distinctive ring shape. Originating from Poland, it's typically boiled before baking, giving it a crisp exterior and soft interior. Bagels are often enjoyed with a variety of toppings, such as cream cheese, smoked salmon, or seeds."
 );
-
 
 brioche.bake();
 bagel.bake();
 
+
 const bolilloBread = new Bolillo();
-bolilloBread.bake(); 
-bolilloBread.serveWithTorta();
+bolilloBread.bake();
 
+const soundButton = new CapybaraSoundButton(
+    'Hear Capybara',
+    './images/volume-high.png',
+    './audio/Capybara_song.mp3',
+    '.capybara-sound-container'
+);
 
-
-
+soundButton.render();
+animate();
