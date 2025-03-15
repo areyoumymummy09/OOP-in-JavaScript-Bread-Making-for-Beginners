@@ -32,19 +32,18 @@ class Bread {
         breadItem.appendChild(difficulty);
         breadItem.appendChild(detailedDescription);
 
-      // Select the correct container to append the bread details
-    const detailsSection = document.querySelector('.bread-details');
-    if (detailsSection) {
-        detailsSection.appendChild(breadItem);
-    } else {
-        console.warn("No element with class 'bread-details' found in the DOM.");
-    }
+        const detailsSection = document.querySelector('.bread-details');
+        if (detailsSection) {
+            detailsSection.appendChild(breadItem);
+        } else {
+            console.warn("No element with class 'bread-details' found in the DOM.");
+        }
     }
 }
 
 export class BriocheCrown extends Bread {
-    constructor(description, mainIngredient, placeOfOrigin, difficulty, imageUrl, detailedDescription) {
-        super("Brioche Crown", description, placeOfOrigin, difficulty, imageUrl, detailedDescription);
+    constructor(description, mainIngredient, placeOfOrigin, difficulty, detailedDescription) {
+        super("Brioche Crown", description, placeOfOrigin, difficulty, detailedDescription);
     }
 
     bake() {
@@ -53,8 +52,8 @@ export class BriocheCrown extends Bread {
 }
 
 export class Bagel extends Bread {
-    constructor(description, mainIngredient, placeOfOrigin, difficulty, imageUrl, detailedDescription) {
-        super("Bagel", description, placeOfOrigin, difficulty, imageUrl, detailedDescription);
+    constructor(description, mainIngredient, placeOfOrigin, difficulty, detailedDescription) {
+        super("Bagel", description, placeOfOrigin, difficulty, detailedDescription);
     }
 
     bake() {
@@ -69,17 +68,11 @@ export class Bolillo extends Bread {
             "Side Dish or Sandwich Bread",
             "Mexico",
             "Hard",
-            "The Bolillo is a traditional Mexican bread roll with a crispy crust and soft, fluffy interior. It's often used for making tortas (Mexican sandwiches) and served as a side for soups and stews."
+            "The Bolillo is a traditional Mexican bread roll with a crispy crust and soft, fluffy interior. It's often used as a side for soups and stews."
         );
     }
 
     bake() {
         this.render();
     }
-
-    serveWithTorta() {
-        const p = document.createElement('p');
-        p.textContent = `The ${this.name} is perfect for making Tortas!`;
-        document.body.appendChild(p);
-    }
-}
+} 

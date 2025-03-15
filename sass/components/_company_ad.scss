@@ -12,6 +12,7 @@
         flex: 2;
         font-size: 1rem;
         line-height: 1.6;
+        padding: 0 15px;
 
         h2, h3 {
             font-size: 1.2rem;
@@ -35,6 +36,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        padding: 0 15px;
     }
 
     // Tip Card Styling
@@ -56,23 +58,19 @@
             line-height: 1.4;
         }
 
-        // Pink Background for the First Card
         &.pink {
             background-color: var.$button-color;
-
         }
 
-        // Yellow Background for the Second Card
         &.yellow {
             background-color: var.$box-color;
 
             img {
-                width: 150px; // Specific size for pink card image
+                width: 150px;
                 height: auto;
             }
         }
 
-        // Social Icons Styling
         .social-icons {
             display: flex;
             justify-content: center;
@@ -86,23 +84,22 @@
         }
     }
 
-    // Desktop Styles (768px and up)
+    // Desktop and Tablet Styles (768px and up)
     @media (min-width: 768px) {
         flex-direction: row;
         align-items: flex-start;
         gap: 40px;
+        padding: 40px 60px; // Add more padding for larger screens
 
-        .bread-details {
-            flex: 2;
-            padding-right: 20px;
-        }
-
-        .bread-tips {
-            flex: 1;
+        .bread-details, .bread-tips {
+            padding: 0 30px; // Increase side padding
+            max-width: 1200px; // Set a max-width for better alignment
+            margin: auto;
         }
 
         .tip-card {
             padding: 20px;
+            
             p {
                 font-size: 1rem;
             }
